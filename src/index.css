@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  background-attachment: fixed;
+}
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
+.searchdiv input {
+  width: 300px;
+  height: 30px;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.377);
+  padding-left: 10px;
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.searchdiv {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(255, 192, 203, 0.377);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  padding: 50px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, auto);
+  gap: 30px;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.377);
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 1px rgba(65, 62, 62, 0.384);
+}
+
+.card:hover {
+  box-shadow: 0px 0px 15px 2px rgba(65, 62, 62, 0.584);
+  transition: box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-5px);
+}
+
+.cardImg {
+  width: 100%;
+  height: 80%;
+}
+
+.cardImg img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.cardTitle {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1046px) {
+  .container {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+  }
+
+  .card {
+    width: 250px;
+    height: 250px;
+  }
+  .searchdiv input {
+    width: 275px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .container {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 20px;
+  }
+  .card {
+    width: 200px;
+    height: 200px;
+  }
+  .searchdiv input {
+    width: 250px;
+    height: 30px;
+  }
+}
